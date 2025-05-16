@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://skbepfowx66o"]
+
+[ext_resource type="Script" path="res://scripts/portas.gd" id="1_bcs54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbgsq"]
+size = Vector2(13.9063, 24.25)
+
+[node name="PORTAS" type="Area2D"]
+script = ExtResource("1_bcs54")
+
+[node name="Area2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rbgsq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

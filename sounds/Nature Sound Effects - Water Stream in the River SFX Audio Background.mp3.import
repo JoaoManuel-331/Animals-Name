@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc8su0w1mpowd"
+path="res://.godot/imported/Nature Sound Effects - Water Stream in the River SFX Audio Background.mp3-82ab26b2edfb129d0ec5d855d9ceda2d.mp3str"
+
+[deps]
+
+source_file="res://sounds/Nature Sound Effects - Water Stream in the River SFX Audio Background.mp3"
+dest_files=["res://.godot/imported/Nature Sound Effects - Water Stream in the River SFX Audio Background.mp3-82ab26b2edfb129d0ec5d855d9ceda2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c683u3pv0um5h"
+path="res://.godot/imported/Musica de Elevador ⧸ Ascensor ｜ 1 Hora.mp3-b99438e4fc86ff6da2e7d4ae25e1a15f.mp3str"
+
+[deps]
+
+source_file="res://cenas/Musica de Elevador ⧸ Ascensor ｜ 1 Hora.mp3"
+dest_files=["res://.godot/imported/Musica de Elevador ⧸ Ascensor ｜ 1 Hora.mp3-b99438e4fc86ff6da2e7d4ae25e1a15f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

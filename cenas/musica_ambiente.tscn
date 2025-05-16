@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gjh6424sjrcq"]
+
+[ext_resource type="AudioStream" uid="uid://c683u3pv0um5h" path="res://cenas/Musica de Elevador ⧸ Ascensor ｜ 1 Hora.mp3" id="1_4ekir"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_4ekir")
+autoplay = true
