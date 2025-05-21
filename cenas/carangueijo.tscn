@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://cw6onawpaj3xi"]
+
+[ext_resource type="Script" path="res://scripts/carangueijo.gd" id="1_lok4x"]
+[ext_resource type="Texture2D" uid="uid://bpj24018lsy51" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Coral Crab/CoralCrab.png" id="1_rjrbq"]
+[ext_resource type="AudioStream" uid="uid://dmrnmo4pnfh5r" path="res://sounds/Hardest Drops in History ch. 4： Noisestorm - Crab Rave.mp3" id="3_5m603"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mjua"]
+atlas = ExtResource("1_rjrbq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkgab"]
+atlas = ExtResource("1_rjrbq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gs1b"]
+atlas = ExtResource("1_rjrbq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hka8j"]
+atlas = ExtResource("1_rjrbq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vopuu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mjua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkgab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gs1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hka8j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qy07k"]
+size = Vector2(15, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fbc7n"]
+radius = 24.0208
+
+[sub_resource type="LabelSettings" id="LabelSettings_cjyxp"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[node name="carangueijo" type="CharacterBody2D"]
+script = ExtResource("1_lok4x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -3)
+scale = Vector2(0.75, 0.625)
+sprite_frames = SubResource("SpriteFrames_vopuu")
+autoplay = "default"
+frame_progress = 0.518317
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -4)
+shape = SubResource("RectangleShape2D_qy07k")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -5)
+shape = SubResource("CircleShape2D_fbc7n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -38.0
+offset_right = 22.0
+offset_bottom = -24.0
+text = "clap clap"
+label_settings = SubResource("LabelSettings_cjyxp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5m603")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

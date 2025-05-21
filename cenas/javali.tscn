@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4ihqric1osmd"]
+
+[ext_resource type="Texture2D" uid="uid://60m4wvv58603" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniBoar.png" id="1_ghoc8"]
+[ext_resource type="Script" path="res://scripts/javali.gd" id="1_m2vap"]
+[ext_resource type="AudioStream" uid="uid://cwywgx6llgsmm" path="res://sounds/BOAR - Sound Effect.mp3" id="2_g3axt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18k18"]
+atlas = ExtResource("1_ghoc8")
+region = Rect2(0, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87nbm"]
+atlas = ExtResource("1_ghoc8")
+region = Rect2(32, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbw0"]
+atlas = ExtResource("1_ghoc8")
+region = Rect2(64, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muixm"]
+atlas = ExtResource("1_ghoc8")
+region = Rect2(96, 0, 32, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m51wn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18k18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87nbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muixm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twkre"]
+size = Vector2(17, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hhs57"]
+radius = 14.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdqu3"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[node name="javali" type="CharacterBody2D"]
+script = ExtResource("1_m2vap")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_m51wn")
+autoplay = "default"
+frame_progress = 0.589989
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_twkre")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_hhs57")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -24.0
+offset_right = 23.0
+offset_bottom = -10.0
+text = "wrannnn"
+label_settings = SubResource("LabelSettings_qdqu3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_g3axt")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

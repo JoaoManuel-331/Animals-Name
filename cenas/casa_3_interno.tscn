@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://n6u2udfjge7y"]
+[gd_scene load_steps=17 format=4 uid="uid://n6u2udfjge7y"]
 
 [ext_resource type="PackedScene" uid="uid://gjh6424sjrcq" path="res://cenas/musica_ambiente.tscn" id="1_y3qkr"]
 [ext_resource type="Texture2D" uid="uid://b5upk4me4c65w" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="2_c3pwd"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://0t3hbmvgcpvj" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Doors.png" id="3_msb6j"]
 [ext_resource type="Texture2D" uid="uid://dhydvr7hiinnh" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="4_pl46i"]
 [ext_resource type="PackedScene" uid="uid://dwmaqq3oq6nme" path="res://cenas/player.tscn" id="5_x632g"]
-[ext_resource type="PackedScene" uid="uid://dou0rhbi2mlyx" path="res://cenas/urso.tscn" id="7_16ovy"]
+[ext_resource type="PackedScene" uid="uid://hgx4q8agk4te" path="res://cenas/npc1.tscn" id="7_8gkfc"]
+[ext_resource type="PackedScene" uid="uid://bjftco4bt0h5g" path="res://cenas/npc_2.tscn" id="8_dy4dd"]
 [ext_resource type="PackedScene" uid="uid://skbepfowx66o" path="res://cenas/portas.tscn" id="8_p3jle"]
+[ext_resource type="PackedScene" uid="uid://pydfuygnqwkc" path="res://cenas/npc_3.tscn" id="9_ncxtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hhme"]
 texture = ExtResource("2_c3pwd")
@@ -140,7 +142,7 @@ tile_map_data = PackedByteArray("AAAKAAcAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_uj44u")
 
 [node name="moveis" type="TileMapLayer" parent="tilemap"]
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAEAAAABAAEAAAAAAAIAAAANAAEAAAAFAAIAAAALAAEAAAAEAAIAAAAMAAEAAAADAAMAAAAMAAIAAAAHAAIAAAAMAAAAAAACAAAAAAAHAAEAAAADAAIAAAAKAAYAAAAAAAUAAAABAAIAAAAAAAUAAAAHAAAAAAAHAAMAAAADAAAAAAAAAAEAAAADAAEAAAAAAAIAAAADAAIAAAAAAAUAAAACAAEAAAAEAAMAAAAEAAEAAAAGAAIAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAAACAAEAAAABAAEAAAACAAIAAAANAAEAAAAFAAIAAAALAAEAAAAEAAIAAAAMAAEAAAADAAMAAAAMAAIAAAAHAAIAAAAMAAAAAAABAAAAAAAHAAEAAAADAAIAAAAKAAYAAAABAAUAAAABAAIAAAABAAUAAAAHAAAAAAAFAAMAAAADAAAAAAACAAEAAAADAAEAAAACAAIAAAADAAIAAAABAAUAAAACAAEAAAAEAAMAAAAEAAEAAAAGAAIAAAACAAUAAAACAAMAAAACAAYAAAACAAQAAAADAAYAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_cwwxv")
 
 [node name="player" type="Node" parent="."]
@@ -148,14 +150,14 @@ tile_set = SubResource("TileSet_cwwxv")
 [node name="player" parent="player" instance=ExtResource("5_x632g")]
 position = Vector2(168, 99)
 
-[node name="urso" parent="player" instance=ExtResource("7_16ovy")]
-position = Vector2(159, 50)
+[node name="npc" parent="player" instance=ExtResource("7_8gkfc")]
+position = Vector2(214, 21)
 
-[node name="urso2" parent="player" instance=ExtResource("7_16ovy")]
-position = Vector2(190, 62)
+[node name="npc2" parent="player" instance=ExtResource("8_dy4dd")]
+position = Vector2(187, 20)
 
-[node name="urso3" parent="player" instance=ExtResource("7_16ovy")]
-position = Vector2(126, 72)
+[node name="npc3" parent="player" instance=ExtResource("9_ncxtg")]
+position = Vector2(214, 38)
 
 [node name="Marcadores" type="Node" parent="."]
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddwbtfuhs2ku"
+path="res://.godot/imported/Fox - Sound Effect ｜ ProSounds.mp3-4719f520a3231af30c906907a6599925.mp3str"
+
+[deps]
+
+source_file="res://sounds/Fox - Sound Effect ｜ ProSounds.mp3"
+dest_files=["res://.godot/imported/Fox - Sound Effect ｜ ProSounds.mp3-4719f520a3231af30c906907a6599925.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

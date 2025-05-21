@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://226e1vay48re"]
+[gd_scene load_steps=58 format=4 uid="uid://226e1vay48re"]
 
 [ext_resource type="Texture2D" uid="uid://btur2ph1g7onq" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_7c37v"]
 [ext_resource type="Texture2D" uid="uid://blrqi3xci5bcq" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_Wide_v2.png" id="1_7vqea"]
@@ -20,6 +20,15 @@
 [ext_resource type="PackedScene" uid="uid://dou0rhbi2mlyx" path="res://cenas/urso.tscn" id="16_25gxl"]
 [ext_resource type="PackedScene" uid="uid://muvmxglqcpxx" path="res://cenas/pica_pau.tscn" id="17_kkbcs"]
 [ext_resource type="PackedScene" uid="uid://bi71tfln1mafn" path="res://cenas/agua.tscn" id="18_umuau"]
+[ext_resource type="PackedScene" uid="uid://b4ihqric1osmd" path="res://cenas/javali.tscn" id="19_lybog"]
+[ext_resource type="PackedScene" uid="uid://304a82u5apv" path="res://cenas/raposa.tscn" id="20_oirnx"]
+[ext_resource type="PackedScene" uid="uid://bx2nv4wjfvnvn" path="res://cenas/wolf.tscn" id="21_dedfo"]
+[ext_resource type="PackedScene" uid="uid://db1x8w8eat6k2" path="res://cenas/tartaruga.tscn" id="22_6c6ua"]
+[ext_resource type="PackedScene" uid="uid://cw6onawpaj3xi" path="res://cenas/carangueijo.tscn" id="23_5agjd"]
+[ext_resource type="PackedScene" uid="uid://cvwb7lfkuqnyl" path="res://cenas/porco_espinho.tscn" id="24_fw3d2"]
+[ext_resource type="PackedScene" uid="uid://doqxxksi1oqa4" path="res://cenas/sapo.tscn" id="25_n32xb"]
+[ext_resource type="PackedScene" uid="uid://b4hkh3d2uw8gq" path="res://cenas/porco.tscn" id="26_br1xv"]
+[ext_resource type="PackedScene" uid="uid://c3v30k7jcemuf" path="res://cenas/kamen_rider.tscn" id="27_dopbr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_275is"]
 texture = ExtResource("1_7c37v")
@@ -822,6 +831,57 @@ position = Vector2(25, 17)
 [node name="pica_pau2" parent="animais" instance=ExtResource("17_kkbcs")]
 position = Vector2(316, 260)
 
+[node name="javali" parent="animais" instance=ExtResource("19_lybog")]
+position = Vector2(438, 609)
+
+[node name="javali2" parent="animais" instance=ExtResource("19_lybog")]
+position = Vector2(488, 444)
+
+[node name="raposa" parent="animais" instance=ExtResource("20_oirnx")]
+position = Vector2(647, 518)
+
+[node name="raposa2" parent="animais" instance=ExtResource("20_oirnx")]
+position = Vector2(549, 485)
+
+[node name="wolf" parent="animais" instance=ExtResource("21_dedfo")]
+position = Vector2(370, 522)
+
+[node name="wolf2" parent="animais" instance=ExtResource("21_dedfo")]
+position = Vector2(542, 561)
+
+[node name="tartaruga" parent="animais" instance=ExtResource("22_6c6ua")]
+position = Vector2(233, 362)
+
+[node name="tartaruga2" parent="animais" instance=ExtResource("22_6c6ua")]
+position = Vector2(534, 390)
+
+[node name="carangueijo" parent="animais" instance=ExtResource("23_5agjd")]
+position = Vector2(202, 344)
+
+[node name="carangueijo2" parent="animais" instance=ExtResource("23_5agjd")]
+position = Vector2(266, 356)
+
+[node name="porco espinho" parent="animais" instance=ExtResource("24_fw3d2")]
+position = Vector2(432, 27)
+
+[node name="porco espinho2" parent="animais" instance=ExtResource("24_fw3d2")]
+position = Vector2(532, 152)
+
+[node name="sapo" parent="animais" instance=ExtResource("25_n32xb")]
+position = Vector2(476, 283)
+
+[node name="sapo2" parent="animais" instance=ExtResource("25_n32xb")]
+position = Vector2(584, 29)
+
+[node name="porco" parent="animais" instance=ExtResource("26_br1xv")]
+position = Vector2(741, 275)
+
+[node name="porco2" parent="animais" instance=ExtResource("26_br1xv")]
+position = Vector2(844, 307)
+
+[node name="kamen rider" parent="animais" instance=ExtResource("27_dopbr")]
+position = Vector2(259, 591)
+
 [node name="player" type="Node" parent="."]
 
 [node name="player" parent="player" instance=ExtResource("3_qqpvi")]
@@ -830,7 +890,7 @@ position = Vector2(152, 79)
 [node name="som agua" type="Node" parent="."]
 
 [node name="Area2D" parent="som agua" instance=ExtResource("18_umuau")]
-position = Vector2(8, 338)
+position = Vector2(16, 340)
 scale = Vector2(1.39622, 0.435247)
 
 [node name="Area2D2" parent="som agua" instance=ExtResource("18_umuau")]

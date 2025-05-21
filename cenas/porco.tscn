@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4hkh3d2uw8gq"]
+
+[ext_resource type="Texture2D" uid="uid://c45bb453ikh47" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Dainty Pig/DaintyPig.png" id="1_o60uf"]
+[ext_resource type="Script" path="res://scripts/porco.gd" id="1_r42nx"]
+[ext_resource type="AudioStream" uid="uid://bg51exo7fpqpe" path="res://sounds/Pig - Sound Effect ｜ ProSounds.mp3" id="3_8dtu2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m42wu"]
+atlas = ExtResource("1_o60uf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxuqc"]
+atlas = ExtResource("1_o60uf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du8iu"]
+atlas = ExtResource("1_o60uf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31iew"]
+atlas = ExtResource("1_o60uf")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_goqnw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m42wu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxuqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du8iu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31iew")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3d31"]
+size = Vector2(16, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn281"]
+radius = 13.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyv0j"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+
+[node name="porco" type="CharacterBody2D"]
+script = ExtResource("1_r42nx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_goqnw")
+autoplay = "default"
+frame_progress = 0.481875
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_b3d31")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_dn281")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -23.0
+offset_right = 24.0
+offset_bottom = -7.0
+text = "oink oink"
+label_settings = SubResource("LabelSettings_gyv0j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8dtu2")
+volume_db = 24.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg51exo7fpqpe"
+path="res://.godot/imported/Pig - Sound Effect ｜ ProSounds.mp3-d2e18891d3e02c71c2d9855f97101dfa.mp3str"
+
+[deps]
+
+source_file="res://sounds/Pig - Sound Effect ｜ ProSounds.mp3"
+dest_files=["res://.godot/imported/Pig - Sound Effect ｜ ProSounds.mp3-d2e18891d3e02c71c2d9855f97101dfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

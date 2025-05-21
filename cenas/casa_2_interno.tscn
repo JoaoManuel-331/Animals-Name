@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://0t3hbmvgcpvj" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Doors.png" id="3_5j867"]
 [ext_resource type="Texture2D" uid="uid://dhydvr7hiinnh" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="4_sem7b"]
 [ext_resource type="PackedScene" uid="uid://dwmaqq3oq6nme" path="res://cenas/player.tscn" id="5_8f81b"]
-[ext_resource type="PackedScene" uid="uid://27hmf5vgirmu" path="res://cenas/vaca.tscn" id="6_4u15u"]
 [ext_resource type="PackedScene" uid="uid://skbepfowx66o" path="res://cenas/portas.tscn" id="6_jawfe"]
-[ext_resource type="PackedScene" uid="uid://dou0rhbi2mlyx" path="res://cenas/urso.tscn" id="7_bgs00"]
+[ext_resource type="PackedScene" uid="uid://hgx4q8agk4te" path="res://cenas/npc1.tscn" id="7_hm0ng"]
+[ext_resource type="PackedScene" uid="uid://yi5vlr4jkyrn" path="res://cenas/npc_4.tscn" id="8_ea8wg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hhme"]
 texture = ExtResource("2_128bh")
@@ -141,7 +141,7 @@ tile_map_data = PackedByteArray("AAAKAAcAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_uj44u")
 
 [node name="moveis" type="TileMapLayer" parent="tilemap"]
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAEAAAABAAEAAAAAAAIAAAANAAEAAAAFAAIAAAALAAEAAAAEAAIAAAAMAAEAAAADAAMAAAAMAAIAAAAHAAIAAAAMAAAAAAACAAAAAAAHAAEAAAADAAIAAAAKAAYAAAAAAAUAAAABAAIAAAAAAAUAAAAHAAAAAAAHAAMAAAADAAAAAAAAAAEAAAADAAEAAAAAAAIAAAADAAIAAAAAAAUAAAACAAEAAAAEAAMAAAAEAAEAAAAGAAIAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAAABAAEAAAABAAEAAAABAAIAAAANAAEAAAAFAAIAAAALAAEAAAAEAAIAAAAMAAEAAAADAAMAAAAMAAIAAAAHAAIAAAAMAAAAAAAAAAAAAAAHAAEAAAADAAIAAAAKAAYAAAACAAUAAAABAAIAAAACAAUAAAAHAAAAAAAGAAMAAAADAAAAAAABAAEAAAADAAEAAAABAAIAAAADAAIAAAACAAUAAAACAAEAAAAEAAMAAAAEAAEAAAAGAAIAAAA=")
 tile_set = SubResource("TileSet_cwwxv")
 
 [node name="player" type="Node" parent="."]
@@ -149,11 +149,11 @@ tile_set = SubResource("TileSet_cwwxv")
 [node name="player" parent="player" instance=ExtResource("5_8f81b")]
 position = Vector2(168, 99)
 
-[node name="vaca" parent="player" instance=ExtResource("6_4u15u")]
-position = Vector2(49, 74)
+[node name="npc" parent="player" instance=ExtResource("7_hm0ng")]
+position = Vector2(214, 20)
 
-[node name="urso" parent="player/vaca" instance=ExtResource("7_bgs00")]
-position = Vector2(110, -24)
+[node name="npc4" parent="player" instance=ExtResource("8_ea8wg")]
+position = Vector2(72, 21)
 
 [node name="Marcadores" type="Node" parent="."]
 

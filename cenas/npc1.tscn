@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://hgx4q8agk4te"]
+
+[ext_resource type="Texture2D" uid="uid://bbko7ii83brk1" path="res://jm/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_ut2bs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8tvl"]
+atlas = ExtResource("1_ut2bs")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb0ey"]
+atlas = ExtResource("1_ut2bs")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_828g6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8tvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb0ey")
+}],
+"loop": true,
+"name": &"lado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibnp2"]
+size = Vector2(10, 16)
+
+[node name="npc" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_828g6")
+animation = &"lado"
+autoplay = "lado"
+frame_progress = 0.245378
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ibnp2")

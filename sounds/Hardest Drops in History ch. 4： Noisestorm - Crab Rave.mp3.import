@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmrnmo4pnfh5r"
+path="res://.godot/imported/Hardest Drops in History ch. 4： Noisestorm - Crab Rave.mp3-5e4c99414fa373c7f0ca8a2a396fa45c.mp3str"
+
+[deps]
+
+source_file="res://sounds/Hardest Drops in History ch. 4： Noisestorm - Crab Rave.mp3"
+dest_files=["res://.godot/imported/Hardest Drops in History ch. 4： Noisestorm - Crab Rave.mp3-5e4c99414fa373c7f0ca8a2a396fa45c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
