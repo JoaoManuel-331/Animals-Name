@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://doqxxksi1oqa4"]
+[gd_scene load_steps=13 format=3 uid="uid://doqxxksi1oqa4"]
 
 [ext_resource type="Script" path="res://scripts/sapo.gd" id="1_0swxt"]
 [ext_resource type="Texture2D" uid="uid://bk7pnwws3ygbu" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Croaking Toad/CroakingToad.png" id="1_jc2ky"]
 [ext_resource type="AudioStream" uid="uid://oag0eydoaa71" path="res://sounds/Frog (Croaking) - Sound Effect ｜ ProSounds.mp3" id="3_00pis"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_yxbuj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qg00"]
 atlas = ExtResource("1_jc2ky")
@@ -79,6 +80,10 @@ label_settings = SubResource("LabelSettings_qmqyd")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_00pis")
 volume_db = 24.0
+
+[node name="contado" parent="." instance=ExtResource("4_yxbuj")]
+position = Vector2(-3, 5)
+scale = Vector2(0.386157, 0.409689)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

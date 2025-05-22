@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bot6a2ptdhjff"]
+[gd_scene load_steps=18 format=4 uid="uid://bot6a2ptdhjff"]
 
 [ext_resource type="PackedScene" uid="uid://gjh6424sjrcq" path="res://cenas/musica_ambiente.tscn" id="1_vi8o5"]
 [ext_resource type="AudioStream" uid="uid://bpie0co1aqpi2" path="res://sounds/SONG NO COPYRIGHT - MUSICA SEM DIREITOS AUTORAIS ｜ Lofi hip hop beat.mp3" id="2_5ro06"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://skbepfowx66o" path="res://cenas/portas.tscn" id="6_jawfe"]
 [ext_resource type="PackedScene" uid="uid://hgx4q8agk4te" path="res://cenas/npc1.tscn" id="7_hm0ng"]
 [ext_resource type="PackedScene" uid="uid://yi5vlr4jkyrn" path="res://cenas/npc_4.tscn" id="8_ea8wg"]
+[ext_resource type="PackedScene" uid="uid://c653nvrdd3t0x" path="res://cenas/como_jogar.tscn" id="10_ehre1"]
+[ext_resource type="PackedScene" uid="uid://d4i8httpkwg2g" path="res://cenas/hud.tscn" id="11_1jbnq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hhme"]
 texture = ExtResource("2_128bh")
@@ -164,3 +166,8 @@ position = Vector2(167, 91)
 position = Vector2(168, 121)
 id_porta_destino = "porta_saida_casa2"
 cena_destino = "res://cenas/no_principal.tscn"
+
+[node name="como jogar" parent="Marcadores" instance=ExtResource("10_ehre1")]
+position = Vector2(73, 24)
+
+[node name="HUD" parent="." instance=ExtResource("11_1jbnq")]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cw6onawpaj3xi"]
+[gd_scene load_steps=13 format=3 uid="uid://cw6onawpaj3xi"]
 
 [ext_resource type="Script" path="res://scripts/carangueijo.gd" id="1_lok4x"]
 [ext_resource type="Texture2D" uid="uid://bpj24018lsy51" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Coral Crab/CoralCrab.png" id="1_rjrbq"]
 [ext_resource type="AudioStream" uid="uid://dmrnmo4pnfh5r" path="res://sounds/Hardest Drops in History ch. 4： Noisestorm - Crab Rave.mp3" id="3_5m603"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_knkxx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mjua"]
 atlas = ExtResource("1_rjrbq")
@@ -80,6 +81,9 @@ label_settings = SubResource("LabelSettings_cjyxp")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_5m603")
+
+[node name="contado" parent="." instance=ExtResource("4_knkxx")]
+position = Vector2(-3, -5)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

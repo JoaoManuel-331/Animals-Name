@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwvb36kwxl1bo"]
+[gd_scene load_steps=11 format=3 uid="uid://dwvb36kwxl1bo"]
 
 [ext_resource type="Texture2D" uid="uid://c71sok43u1hdv" path="res://jm/Sprout Lands - Sprites - Basic pack/Characters/Free Chicken Sprites.png" id="1_biwbf"]
 [ext_resource type="Script" path="res://scripts/galinha.gd" id="1_l0qsh"]
 [ext_resource type="AudioStream" uid="uid://db0fugxvutovv" path="res://sounds/Galinha cacarejando.mp3" id="2_roajy"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_hbk3k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_530wr"]
 atlas = ExtResource("1_biwbf")
@@ -65,6 +66,10 @@ label_settings = SubResource("LabelSettings_u7hs4")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_roajy")
+
+[node name="contado" parent="." instance=ExtResource("4_hbk3k")]
+position = Vector2(-3, 0)
+scale = Vector2(0.44, 0.4)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

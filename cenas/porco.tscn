@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4hkh3d2uw8gq"]
+[gd_scene load_steps=13 format=3 uid="uid://b4hkh3d2uw8gq"]
 
 [ext_resource type="Texture2D" uid="uid://c45bb453ikh47" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Dainty Pig/DaintyPig.png" id="1_o60uf"]
 [ext_resource type="Script" path="res://scripts/porco.gd" id="1_r42nx"]
 [ext_resource type="AudioStream" uid="uid://bg51exo7fpqpe" path="res://sounds/Pig - Sound Effect ｜ ProSounds.mp3" id="3_8dtu2"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_iag8w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m42wu"]
 atlas = ExtResource("1_o60uf")
@@ -79,6 +80,8 @@ label_settings = SubResource("LabelSettings_gyv0j")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_8dtu2")
 volume_db = 24.0
+
+[node name="contado" parent="." instance=ExtResource("4_iag8w")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

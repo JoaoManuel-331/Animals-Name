@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://304a82u5apv"]
+[gd_scene load_steps=13 format=3 uid="uid://304a82u5apv"]
 
 [ext_resource type="Script" path="res://scripts/raposa.gd" id="1_8fewl"]
 [ext_resource type="Texture2D" uid="uid://dgerd5xebmafx" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniFox.png" id="2_36b4y"]
 [ext_resource type="AudioStream" uid="uid://ddwbtfuhs2ku" path="res://sounds/Fox - Sound Effect ｜ ProSounds.mp3" id="3_hbv3y"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_rk08e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jx11"]
 atlas = ExtResource("2_36b4y")
@@ -78,6 +79,10 @@ label_settings = SubResource("LabelSettings_264se")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_hbv3y")
+
+[node name="contado" parent="." instance=ExtResource("4_rk08e")]
+position = Vector2(0, 6)
+scale = Vector2(0.465106, 0.422552)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

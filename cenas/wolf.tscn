@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx2nv4wjfvnvn"]
+[gd_scene load_steps=14 format=3 uid="uid://bx2nv4wjfvnvn"]
 
 [ext_resource type="Script" path="res://scripts/wolf.gd" id="1_8bjxt"]
 [ext_resource type="Texture2D" uid="uid://cc3s4yo8si5qk" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniWolf.png" id="1_26dqd"]
 [ext_resource type="AudioStream" uid="uid://1ydaojgvojyg" path="res://sounds/wolf sound effect.mp3" id="2_8s5ab"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_5orvv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy30q"]
 atlas = ExtResource("1_26dqd")
@@ -87,6 +88,10 @@ label_settings = SubResource("LabelSettings_8c0vj")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_8s5ab")
 volume_db = 24.0
+
+[node name="contado" parent="." instance=ExtResource("4_5orvv")]
+position = Vector2(2, 4)
+scale = Vector2(0.684842, 0.789434)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

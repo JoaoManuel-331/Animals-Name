@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c653nvrdd3t0x"]
+
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_kxmpr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ki65t"]
+radius = 20.3961
+
+[sub_resource type="LabelSettings" id="LabelSettings_iglqa"]
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+
+[node name="como jogar" type="CharacterBody2D"]
+script = ExtResource("1_kxmpr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ki65t")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 18.0
+offset_right = 73.0
+offset_bottom = 63.0
+text = "encontre todos o s animais para finalizar o jogo"
+label_settings = SubResource("LabelSettings_iglqa")
+autowrap_mode = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

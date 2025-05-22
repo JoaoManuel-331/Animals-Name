@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://db1x8w8eat6k2"]
+[gd_scene load_steps=13 format=3 uid="uid://db1x8w8eat6k2"]
 
 [ext_resource type="Script" path="res://scripts/tartaruga.gd" id="1_pfeog"]
 [ext_resource type="Texture2D" uid="uid://dfoqbndx0je7d" path="res://jm/Sprout Lands - Sprites - Basic pack/Basic Asset Pack/Basic Animal Animations/Slow Turtle/SlowTurtle.png" id="2_0eefk"]
 [ext_resource type="AudioStream" uid="uid://bcucht7ggtcyt" path="res://sounds/qual o som q a tartaruga faz？.mp3" id="3_dochi"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_f6pik"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cccon"]
 atlas = ExtResource("2_0eefk")
@@ -43,6 +44,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6eqt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7djig"]
+radius = 38.0526
 
 [sub_resource type="LabelSettings" id="LabelSettings_gj62g"]
 font_size = 12
@@ -74,6 +76,9 @@ label_settings = SubResource("LabelSettings_gj62g")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_dochi")
 volume_db = 24.0
+
+[node name="contado" parent="." instance=ExtResource("4_f6pik")]
+scale = Vector2(1.52851, 1.48064)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

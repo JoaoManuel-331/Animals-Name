@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dou0rhbi2mlyx"]
+[gd_scene load_steps=19 format=3 uid="uid://dou0rhbi2mlyx"]
 
 [ext_resource type="Texture2D" uid="uid://b7pl5g8aphvk1" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniBear.png" id="1_4urrc"]
 [ext_resource type="Script" path="res://scripts/urso.gd" id="1_tce1r"]
-[ext_resource type="AudioStream" uid="uid://pnex2wmmjyp7" path="res://sounds/Rugido Aterrorizante de um urso (Efeito Sonoro).mp3" id="3_rdrcu"]
+[ext_resource type="AudioStream" uid="uid://cs8g36380xw4d" path="res://sounds/Rugido Aterrorizante de um urso (Efeito Sonoro).mp3" id="3_rdrcu"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_rvjjx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_841bp"]
 atlas = ExtResource("1_4urrc")
@@ -122,6 +123,10 @@ label_settings = SubResource("LabelSettings_pp8ql")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rdrcu")
+
+[node name="contado" parent="." instance=ExtResource("4_rvjjx")]
+position = Vector2(0, -3)
+scale = Vector2(0.812478, 0.794437)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4ihqric1osmd"]
+[gd_scene load_steps=13 format=3 uid="uid://b4ihqric1osmd"]
 
 [ext_resource type="Texture2D" uid="uid://60m4wvv58603" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniBoar.png" id="1_ghoc8"]
 [ext_resource type="Script" path="res://scripts/javali.gd" id="1_m2vap"]
 [ext_resource type="AudioStream" uid="uid://cwywgx6llgsmm" path="res://sounds/BOAR - Sound Effect.mp3" id="2_g3axt"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_3swjg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18k18"]
 atlas = ExtResource("1_ghoc8")
@@ -79,6 +80,10 @@ label_settings = SubResource("LabelSettings_qdqu3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_g3axt")
+
+[node name="contado" parent="." instance=ExtResource("4_3swjg")]
+position = Vector2(0, 4)
+scale = Vector2(0.559999, 0.6)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

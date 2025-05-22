@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://226e1vay48re"]
+[gd_scene load_steps=59 format=4 uid="uid://226e1vay48re"]
 
 [ext_resource type="Texture2D" uid="uid://btur2ph1g7onq" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_7c37v"]
 [ext_resource type="Texture2D" uid="uid://blrqi3xci5bcq" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_Wide_v2.png" id="1_7vqea"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://doqxxksi1oqa4" path="res://cenas/sapo.tscn" id="25_n32xb"]
 [ext_resource type="PackedScene" uid="uid://b4hkh3d2uw8gq" path="res://cenas/porco.tscn" id="26_br1xv"]
 [ext_resource type="PackedScene" uid="uid://c3v30k7jcemuf" path="res://cenas/kamen_rider.tscn" id="27_dopbr"]
+[ext_resource type="PackedScene" uid="uid://d4i8httpkwg2g" path="res://cenas/hud.tscn" id="31_kiypt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_275is"]
 texture = ExtResource("1_7c37v")
@@ -890,7 +891,7 @@ position = Vector2(152, 79)
 [node name="som agua" type="Node" parent="."]
 
 [node name="Area2D" parent="som agua" instance=ExtResource("18_umuau")]
-position = Vector2(16, 340)
+position = Vector2(6, 339)
 scale = Vector2(1.39622, 0.435247)
 
 [node name="Area2D2" parent="som agua" instance=ExtResource("18_umuau")]
@@ -928,3 +929,5 @@ scale = Vector2(0.783243, -0.47155)
 [node name="Area2D10" parent="som agua" instance=ExtResource("18_umuau")]
 position = Vector2(744, 192)
 scale = Vector2(0.783243, -0.47155)
+
+[node name="HUD" parent="." instance=ExtResource("31_kiypt")]

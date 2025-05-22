@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://27hmf5vgirmu"]
+[gd_scene load_steps=12 format=3 uid="uid://27hmf5vgirmu"]
 
 [ext_resource type="Script" path="res://scripts/vaca.gd" id="1_cyx3c"]
 [ext_resource type="Texture2D" uid="uid://dntdb3hl8qavl" path="res://jm/Sprout Lands - Sprites - Basic pack/Characters/Free Cow Sprites.png" id="1_vsys4"]
 [ext_resource type="AudioStream" uid="uid://b8usrne4hsbs0" path="res://sounds/Som de vaca mugindo.mp3" id="3_exolm"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_dy5si"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkv1r"]
 atlas = ExtResource("1_vsys4")
@@ -60,7 +61,8 @@ shape = SubResource("RectangleShape2D_j24qm")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 5)
+position = Vector2(0, 1)
+scale = Vector2(0.895252, 0.868105)
 shape = SubResource("CircleShape2D_1ictt")
 
 [node name="Label" type="Label" parent="."]
@@ -73,6 +75,8 @@ label_settings = SubResource("LabelSettings_4370k")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_exolm")
+
+[node name="contado" parent="." instance=ExtResource("4_dy5si")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

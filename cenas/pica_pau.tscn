@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://muvmxglqcpxx"]
+[gd_scene load_steps=13 format=3 uid="uid://muvmxglqcpxx"]
 
 [ext_resource type="Texture2D" uid="uid://cgla65jbb3q7h" path="res://jm/Sprout Lands - Sprites - Basic pack/Outline/MiniBird.png" id="1_04vnl"]
 [ext_resource type="Script" path="res://scripts/pica_pau.gd" id="1_xx621"]
 [ext_resource type="AudioStream" uid="uid://cc08nouwrho2k" path="res://sounds/Efeito sonoro RISADA DO PICA PAU.mp3" id="2_fv4q0"]
+[ext_resource type="PackedScene" uid="uid://d1gbcl2lymjrr" path="res://cenas/contado.tscn" id="4_b2om4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7euak"]
 atlas = ExtResource("1_04vnl")
@@ -79,6 +80,10 @@ label_settings = SubResource("LabelSettings_0b6mg")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_fv4q0")
+
+[node name="contado" parent="." instance=ExtResource("4_b2om4")]
+position = Vector2(-2, 0)
+scale = Vector2(0.399999, 0.400001)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

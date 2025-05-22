@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dnhpv7bw54wiq"]
+[gd_scene load_steps=15 format=4 uid="uid://dnhpv7bw54wiq"]
 
 [ext_resource type="Texture2D" uid="uid://b5upk4me4c65w" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden_House_Walls_Tilset.png" id="1_wwvpw"]
 [ext_resource type="PackedScene" uid="uid://dwmaqq3oq6nme" path="res://cenas/player.tscn" id="2_dlyhg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dhydvr7hiinnh" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Basic_Furniture.png" id="3_mo2av"]
 [ext_resource type="PackedScene" uid="uid://gjh6424sjrcq" path="res://cenas/musica_ambiente.tscn" id="6_l7rot"]
 [ext_resource type="PackedScene" uid="uid://skbepfowx66o" path="res://cenas/portas.tscn" id="8_nmnca"]
+[ext_resource type="PackedScene" uid="uid://d4i8httpkwg2g" path="res://cenas/hud.tscn" id="8_qoatx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hhme"]
 texture = ExtResource("1_wwvpw")
@@ -159,3 +160,5 @@ position = Vector2(168, 92)
 position = Vector2(168, 121)
 id_porta_destino = "porta_saida_casa1"
 cena_destino = "res://cenas/no_principal.tscn"
+
+[node name="HUD" parent="." instance=ExtResource("8_qoatx")]
