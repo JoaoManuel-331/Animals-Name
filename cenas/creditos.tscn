@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://d2rgf2r378kii"]
+[gd_scene load_steps=10 format=4 uid="uid://d2rgf2r378kii"]
 
 [ext_resource type="Script" path="res://scripts/bbtt.gd" id="1_um0eq"]
 [ext_resource type="Texture2D" uid="uid://bdccweflygvv3" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="2_fqumb"]
@@ -25,6 +25,10 @@ sources/1 = SubResource("TileSetAtlasSource_lumed")
 font_size = 30
 font_color = Color(0, 0, 0, 1)
 shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_f484o"]
+font_size = 14
+font_color = Color(0, 0, 0, 1)
 
 [node name="creditos" type="Node2D"]
 
@@ -84,16 +88,33 @@ flat = true
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 275.0
-offset_top = 72.0
-offset_right = 845.0
-offset_bottom = 519.0
+offset_left = 39.0
+offset_top = 145.0
+offset_right = 517.0
+offset_bottom = 502.0
 text = "Olá, tudo bem? Meu nome é João Manuel, sou o criador deste jogo. Espero que goste ou tenha gostado do jogo.
 
-Meu intuito é fazer um jogo em que crianças possam se divertir de maneira educativa.
-
-Boa parte dos sprites e tilesets do jogo, retirei do site itchi.io."
+Meu intuito é fazer um jogo em que crianças possam se divertir de maneira educativa."
 label_settings = SubResource("LabelSettings_gehae")
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 151.0
+offset_right = 1141.0
+offset_bottom = 447.0
+text = "Créditos dos sprites e tilesets:
+
+aniamis: deep dive game studio
+https://deepdivegamestudio.itch.io/animalassetpack/download/eyJleHBpcmVzIjoxNzQ4MDAwMzY2LCJpZCI6MTgxMTE3Nn0%3d.vKEUATgOMOch%2fLN1PTvZUqnm4tE%3d
+
+animais e tileset :Assets -From : Sprout Lands -By : Cup Nooble
+https://cupnooble.itch.io/sprout-lands-asset-pack/download/eyJpZCI6MTI1NjEzOCwiZXhwaXJlcyI6MTc0ODAwMDQ1NH0%3d.CxHKueX%2flbfXUj8uPRb6t%2fykJ7Y%3d
+
+animais:LYASeeK
+https://lyaseek.itch.io/miniffanimals/download/eyJpZCI6MTkxMzg2NSwiZXhwaXJlcyI6MTc0ODAwMDY2MX0%3d.lHG0sdx9ExUGnP3dT%2fauEVCb8ww%3d"
+label_settings = SubResource("LabelSettings_f484o")
 autowrap_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
