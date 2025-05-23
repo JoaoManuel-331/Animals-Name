@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4i8httpkwg2g"]
+[gd_scene load_steps=6 format=3 uid="uid://d4i8httpkwg2g"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_fdkqb"]
 [ext_resource type="FontFile" uid="uid://bwuhmqc8mvpnx" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Minecraft.ttf" id="2_5fth6"]
+[ext_resource type="PackedScene" uid="uid://c0cpxhsbev5aw" path="res://cenas/sair.tscn" id="3_udy7l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pwxvu"]
 font = ExtResource("2_5fth6")
@@ -34,3 +35,9 @@ text = "0"
 label_settings = SubResource("LabelSettings_cgwi7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="sair" parent="." instance=ExtResource("3_udy7l")]
+offset_left = 1107.0
+offset_top = 611.0
+offset_right = 1107.0
+offset_bottom = 611.0

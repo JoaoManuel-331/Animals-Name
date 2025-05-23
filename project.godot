@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Globais="*res://scripts/globais.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_left={
@@ -57,4 +61,5 @@ ui_down={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

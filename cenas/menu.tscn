@@ -195,7 +195,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.741176, 0.458824, 0.494118, 1)
 theme_override_fonts/font = ExtResource("6_w1gfm")
 theme_override_font_sizes/font_size = 29
-text = "Créditos"
+text = "Creditos"
 flat = true
 
 [node name="Label" type="Label" parent="Control"]
