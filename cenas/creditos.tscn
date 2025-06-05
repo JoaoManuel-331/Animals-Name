@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://d2rgf2r378kii"]
+[gd_scene load_steps=11 format=4 uid="uid://d2rgf2r378kii"]
 
 [ext_resource type="Script" path="res://scripts/bbtt.gd" id="1_um0eq"]
 [ext_resource type="Texture2D" uid="uid://bdccweflygvv3" path="res://jm/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="2_fqumb"]
 [ext_resource type="Texture2D" uid="uid://dtsyx1hr3h7g6" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="3_rh81b"]
 [ext_resource type="FontFile" uid="uid://bwuhmqc8mvpnx" path="res://jm/Sprout Lands - Sprites - Basic pack/Objects/Minecraft.ttf" id="4_8f8kq"]
 [ext_resource type="AudioStream" uid="uid://bpie0co1aqpi2" path="res://sounds/SONG NO COPYRIGHT - MUSICA SEM DIREITOS AUTORAIS ｜ Lofi hip hop beat.mp3" id="5_bka4e"]
+[ext_resource type="Texture2D" uid="uid://cgpf5w87w8f5i" path="res://2-removebg-preview.png" id="6_2w000"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lumed"]
 texture = ExtResource("2_fqumb")
@@ -117,7 +118,21 @@ https://lyaseek.itch.io/miniffanimals/download/eyJpZCI6MTkxMzg2NSwiZXhwaXJlcyI6M
 label_settings = SubResource("LabelSettings_f484o")
 autowrap_mode = 1
 
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 45.0
+offset_right = 657.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Empresa: High Level Studios"
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_bka4e")
 autoplay = true
 parameters/looping = true
+
+[node name="2-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(694, 58)
+scale = Vector2(0.191, 0.183934)
+texture = ExtResource("6_2w000")
